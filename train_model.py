@@ -21,10 +21,11 @@ def preprocess_data(data):
     # Sélection des features
     features = ['Âge', 'Niveau_Éducation', 'Expérience_Formation', 
                'Heures_Étude_Par_Semaine', 'Note_Moyenne_Antérieure', 
-               'Difficulté_Formation', 'Durée_Formation_Prévue']
+               'Difficulté_Formation', 'Durée_Formation_Réelle']
     
     X = data[features]
-    y = data['Durée_Formation_Réelle']
+    #Cible
+    y = data['Durée_Formation_Prévue']
     
     # Normalisation des features
     scaler = StandardScaler()
